@@ -1,0 +1,61 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package student;
+import java.util.Scanner;
+/**
+ *
+ * @author 21cse093
+ */
+public class Student {
+    int eng;
+    int phy;
+    int chem;
+    int math;
+    int pyt;
+    
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Student sc=new Student();
+                sc.getdata();
+                sc.calculate();
+        
+    }
+    
+   public void getdata(){
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter student marks");
+       eng=sc.nextInt();
+       phy=sc.nextInt();
+       chem=sc.nextInt();
+       math=sc.nextInt();
+       pyt=sc.nextInt();
+    
+ 
+   }
+   public void calculate(){
+       float total;
+       float avrg;
+       float  grade;
+       total=eng+phy+chem+math+pyt;
+       avrg=total/5;
+       if(avrg>=91||avrg<=90)
+          System.out.println("grade O");
+       else if(avrg>=81||avrg<=90)
+          System.out.println("grade A+");
+       else if(avrg<71||avrg>80)
+          System.out.println("grade A");
+       else if(avrg>=61||avrg<=70)
+          System.out.println("grade B+");
+        else if(avrg>=50||avrg<=60)
+          System.out.println("grade B");
+       else
+          System.out.println("RA");
+   }
+}
+
